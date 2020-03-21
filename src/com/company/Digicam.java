@@ -1,6 +1,6 @@
 package com.company;
 
-public class digicam {
+public class Digicam {
     private String brand = "";
     private String model = "";
     private int year = 0;

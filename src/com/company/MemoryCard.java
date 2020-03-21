@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class memoryCard {
+public class MemoryCard {
     public String brand = "";
     public double totalCapacity = 0;
     public double freeCapacity = 0;
@@ -12,7 +12,7 @@ public class memoryCard {
     Scanner userInterface = new Scanner(System.in);
 
 
-    public memoryCard(String brand, int totalCapacity) {
+    public MemoryCard(String brand, int totalCapacity) {
         this.brand = brand;
         this.totalCapacity = totalCapacity;
         this.freeCapacity = totalCapacity;

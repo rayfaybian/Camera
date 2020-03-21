@@ -6,7 +6,7 @@ public class Main {
 
         //Aufgabe Fotoapparat
 
-        digicam canon = new digicam();
+        Digicam canon = new Digicam();
 
         canon.setBrand("Canon");
         canon.setModel("Ixus 185");
@@ -18,7 +18,7 @@ public class Main {
 
         canon.getSpecsheet();
 
-        digicam panasonic = new digicam();
+        Digicam panasonic = new Digicam();
 
         panasonic.setBrand("Panasonic");
         panasonic.setModel("DC-TZ202EG-K");
@@ -30,7 +30,7 @@ public class Main {
 
         panasonic.getSpecsheet();
 
-        digicam sony = new digicam();
+        Digicam sony = new Digicam();
 
         sony.setBrand("Sony");
         sony.setModel("Cyber shot™ DSC-RX100");
@@ -45,39 +45,26 @@ public class Main {
 
         //Aufgabe Fotoapparat1
 
-        dslr myCanon = new dslr("Canon","5d Mark IV", 2016);
+        Dslr myCanon = new Dslr("Canon","5d Mark IV", 2016);
 
-        lens standardKitLens = new lens("Canon","Wide Angle",18,35);
+        Lens standardKitLens = new Lens("Canon","Wide Angle",18,35);
 
-        lens telephotoLens = new lens("Canon","Telephoto", 70,200);
+        Lens telephotoLens = new Lens("Canon","Telephoto", 70,200);
 
-        memoryCard privateMemoryCard = new memoryCard("Medion",32);
-        memoryCard businessMemoryCard = new memoryCard("Sony",1024);
+        MemoryCard privateMemoryCard = new MemoryCard("Medion",32);
+        MemoryCard businessMemoryCard = new MemoryCard("Sony",1024);
 
         myCanon.setLens(telephotoLens);
         myCanon.setMemoryCard(privateMemoryCard);
 
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
+        myCanon.makePhoto(7);
+
         myCanon.setMemoryCard(businessMemoryCard);
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
+        myCanon.makePhoto(5);
+
         myCanon.setLens(standardKitLens);
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
-        myCanon.makePhoto();
+        myCanon.makePhoto(7);
+
 
         System.out.println(businessMemoryCard.getFreeCapacityInPercent());
         System.out.println(businessMemoryCard.getRemainingPhotos());
